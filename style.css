@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", serif;
+  user-select: none;
+}
+:root {
+  --homeColor: #009990;
+  --heartColor: #e31b23;
+  --plusColor: #fcc737;
+  --searchColor: #00ff9c;
+  --userColor: #3fa0e7;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #262626;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.icon {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #666;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px #7c7c7c;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #07ffee;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #07ffee;
+}
+
+.icon:hover {
+  color: #07ffee;
+  transition: all 0.3s ease-in-out;
+}
